@@ -1,7 +1,7 @@
 package org.myexample.elasticsearch.controller;
 
-import org.myexample.elasticsearch.bean.Book;
 import org.myexample.elasticsearch.dao.BookDao;
+import org.myexample.elasticsearch.entity.Book;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;

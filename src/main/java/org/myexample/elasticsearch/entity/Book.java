@@ -1,4 +1,4 @@
-package org.myexample.elasticsearch.bean;
+package org.myexample.elasticsearch.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

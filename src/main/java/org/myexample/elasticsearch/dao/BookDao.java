@@ -13,7 +13,7 @@ import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
-import org.myexample.elasticsearch.bean.Book;
+import org.myexample.elasticsearch.entity.Book;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
