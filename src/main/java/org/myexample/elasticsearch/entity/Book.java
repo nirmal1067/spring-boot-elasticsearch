@@ -1,8 +1,13 @@
 package org.myexample.elasticsearch.entity;
 
+import org.myexample.elasticsearch.common.Index;
+import org.myexample.elasticsearch.common.Type;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
+@Index(value="bookdata")
+@Type(value="books")
 public class Book {
 
     private String id;

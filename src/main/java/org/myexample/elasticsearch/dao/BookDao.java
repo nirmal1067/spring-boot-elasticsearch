@@ -38,8 +38,12 @@ public class BookDao {
     public Book insertBook(Book book){
         book.setId(UUID.randomUUID().toString());
         Map<String, Object> dataMap = objectMapper.convertValue(book, Map.class);
+       // objectMapper.conver
         IndexRequest indexRequest = new IndexRequest(INDEX, TYPE, book.getId())
                 .source(dataMap);
+        
+       // Insert
+        //indexRequest.d
         try {
             IndexResponse response = restHighLevelClient.index(indexRequest);
         } catch(ElasticsearchException e) {
@@ -69,9 +73,12 @@ public class BookDao {
         error.put("Error", "Unable to update book");
         try {
             String bookJson = objectMapper.writeValueAsString(book);
+          //  updateRequest.
+           // objectMapper.rea
             updateRequest.doc(bookJson, XContentType.JSON);
             UpdateResponse updateResponse = restHighLevelClient.update(updateRequest);
             Map<String, Object> sourceAsMap = updateResponse.getGetResult().sourceAsMap();
+           // updateResponse.getGetResult().
             return sourceAsMap;
         }catch (JsonProcessingException e){
             e.getMessage();
